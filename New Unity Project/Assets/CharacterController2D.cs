@@ -1,5 +1,5 @@
 /*	#
-	# 1: Title: "2D Movement in Unity (Tutorial)" | Author: Brackeys | Source: 	https://www.youtube.com/watch?v=dwcT-Dch0bA&list=WL&index=16&t=826s | Date retrieved: 1/27/2021 @ 8:30pm
+	# 1: Title: "2D Movement in Unity (Tutorial)" | Author: Brackeys | Source: 	https://www.youtube.com/watch?v=dwcT-Dch0bA&list=WL&index=16&t=826s, https://github.com/Brackeys/2D-Movement | Date retrieved: 1/27/2021 @ 8:30pm
 	# 
 */
 
