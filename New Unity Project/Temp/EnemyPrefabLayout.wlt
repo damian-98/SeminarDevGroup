@@ -427,7 +427,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/DAM1998/Senior_Seminar/Project/SeminarDevGroup/New Unity Project
+  m_LastProjectPath: /Users/DAM1998/SeminarDevGroup/Project/New Unity Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
