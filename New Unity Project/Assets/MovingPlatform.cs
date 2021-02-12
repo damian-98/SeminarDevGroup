@@ -1,6 +1,9 @@
-﻿# 
+﻿/*
+# 
 # 1: Title: "HOW TO MAKE A WORKING 2D MOVING PLATFORM-Unity Tutorial" | Author: bblakeyyy | Source: https://www.youtube.com/watch?v=Q8Lb9IhqY0s&list=WL&index=70| Date retrieved: 2/11/2021 @ 10:00am
 #
+*/
+
 // #1: ####################################################################################################################################################
 using System.Collections;
 using System.Collections.Generic;
