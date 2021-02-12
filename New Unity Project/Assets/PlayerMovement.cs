@@ -6,6 +6,8 @@
     #
     # 3: Title: "2D Movement in Unity (Tutorial)" | Author: Brackeys | Source: https://www.youtube.com/watch?v=dwcT-Dch0bA&t=1036s, https://github.com/Brackeys/2D-Movement/blob/master/2D%20Movement/Assets/CharacterController2D.cs | Date retrieved: Date retrieved: 1/27/2021 @ 8:30pm
     #
+    # 4: Title: "HOW TO MAKE A WORKING 2D MOVING PLATFORM-Unity Tutorial" | Author: bblakeyyy | Source: https://www.youtube.com/watch?v=Q8Lb9IhqY0s&list=WL&index=70| Date retrieved: 2/11/2021 @ 10:00am
+    #
 */
 
 // #2: ####################################################################################################################################################
@@ -14,7 +16,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
-
+   public GameObject player;
 // #3: ####################################################################################################################################################
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
@@ -116,5 +118,35 @@ public class PlayerMovement : MonoBehaviour{
 		}
         // ####################################################################################################################################################
     }
-}
+
+    // #4: ####################################################################################################################################################
+        void OnCollisionEnter2D(Collision2D other)
+        {
+            if(other.gameObject.CompareTag("Ground")) //this if block just makes sure once the player jumps in the air that it cant jump again.
+            {
+                isJumping = false;
+            }
+
+            if(other.gameObject.CompareTag("MGround")) //This if statement is just saying whenever the player collides with the object with tag MGround then player object will become a child of that object.
+            {
+                this.transform.parent = other.transform;
+                isJumping = false;
+            }
+        }
+
+         void OnCollisionExit2D(Collision2D other) 
+        {
+            if(other.gameObject.CompareTag("Ground")) 
+            {
+                isJumping = true;
+            }
+
+            if(other.gameObject.CompareTag("MGround"))// This if block is saying once the player jumps from the game object tagged MGround that it will become its own parent again.
+            {
+                this.transform.parent = null;
+                isJumping = true;
+            }
+        }
+}       // #4: ####################################################################################################################################################
+
 // ####################################################################################################################################################
